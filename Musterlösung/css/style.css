@@ -1,0 +1,356 @@
+:root {
+    --color-brand-dark: #012345;
+    --color-brand-medium: #345678;
+    --color-brand-light: #456789;
+    --color-white: #fff;
+    --color-text-default: #444;
+    --bg-gray: #efefef;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-text-default);
+    margin: 0;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+
+/*****************************
+ * Allgemeine Elemente       *
+ *****************************/
+.bg-blue-medium {
+    background-color: var(--color-brand-medium);
+    color: white;
+}
+
+.bg-gray {
+    background-color: var(--bg-gray);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-2 .col {
+    width: 48%;
+}
+.row-3 .col {
+    width: 32%;
+}
+.row-4 .col {
+    width: 23%;
+}
+
+.ptb-3 {
+    padding: 3rem 0;
+}
+
+.pb-3 {
+    padding-bottom: 3rem;
+}
+
+.pt-3 {
+    padding-top: 3rem;
+}
+
+.p-3 {
+    padding: 3rem;
+}
+
+.img-fluid {
+    height: auto;
+    max-width: 100%;
+}
+
+.map-container {
+    position: relative;
+}
+
+.video-container {
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.map-container iframe,
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/*****************************
+ * Header + Navigation       *
+ *****************************/
+#page-header {
+    background-color: var(--color-white);
+    box-shadow: 0px 3px 10px 0px rgba(100,100,100,0.75);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+#main-nav .container {
+    padding: 1rem 0;
+}
+
+#main-nav .nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#main-nav .nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-nav .nav-item {
+    align-items: center;
+    display: flex;
+}
+
+#main-nav .nav-link {
+    color: var(--color-text-default);
+    border: 1px solid transparent;
+    display: block;
+    font-size: 1.2rem;
+    margin: 0 0.75rem;
+    padding: 0.375rem 0;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#main-nav .nav-link:hover {
+    color: var(--color-brand-light);
+    border-bottom: 1px solid var(--color-brand-light);
+}
+
+#main-nav .brand.nav-link:hover {
+    border-bottom: 1px solid transparent;
+}
+
+
+/*****************************
+ * Banner                    *
+ *****************************/
+.banner {
+    height: 500px;
+    position: relative;
+}
+
+.banner img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner .banner-headline {
+    position: absolute;
+    bottom: 2rem;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.banner .banner-headline h1 {
+    background-color: rgba(255,255,255,0.5);
+    color: #000;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: normal;
+    padding: 1rem;
+    margin: 0;
+}
+
+/*****************************
+ * Produkte                  *
+ *****************************/
+.product .product-image {
+    height: 200px;
+}
+
+.product .product-image img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.product h3 {
+    margin: 1rem 0 0.5rem;
+}
+
+.product p {
+    margin: 0;
+}
+
+
+/*****************************
+ * Zitat                     *
+ *****************************/
+.quote q {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.quote figcaption {
+    font-style: italic;
+    text-align: center;
+}
+
+
+/*****************************
+ * Kontakt-Formular          *
+ *****************************/
+form label {
+    display: block;
+    font-weight: 400;
+}
+
+form .form-field {
+    margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    box-sizing: border-box;
+    border: 1px solid #888;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+    width: 100%;
+}
+
+form button {
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    padding: 0.8rem 1rem;
+}
+
+
+/*****************************
+ * Legal Element             *
+ *****************************/
+.legal-element {
+    color: var(--color-white);
+    padding: 1rem 0;
+}
+
+.legal-element .legal-flex-start {
+    align-items: center;
+}
+
+.legal-element .legal-flex-end {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.legal-element a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+
+/*****************************
+ * Quick Links Element       *
+ *****************************/
+.quick-links {
+    padding: 3rem 0;
+}
+.quick-links a {
+    color: var(--color-text-default);
+}
+
+.quick-links .qulick-link-header {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1.5625rem;
+    text-transform: uppercase;
+}
+.quick-links .icon-link {
+    font-size: 2.5rem;
+
+}
+.quick-links .text-link {
+    display: block;
+}
+
+/*****************************
+ * Scroll-To-Top             *
+ *****************************/
+#scroll-to-top {
+    background-color: var(--color-brand-medium);
+    border-radius: 0.375rem;
+    bottom: 1rem;
+    color: white;
+    display: block;
+    line-height: 2rem;
+    opacity: 0.8;
+    position: fixed;
+    right: 1rem;
+    text-align: center;
+    text-decoration: none;
+    width: 2rem;
+    z-index: 100;
+}
+#scroll-to-top:hover {
+    background-color: var(--color-brand-dark);
+    cursor: pointer;
+}
+
+/*****************************
+ * Smartphone Anpassungen    *
+ *****************************/
+@media screen and (max-width: 575px) {
+    .hidden-phone {
+        display: none !important;
+    }
+
+    .container {
+        padding: 2rem 1rem;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .row.row-2 .col,
+    .row.row-3 .col,
+    .row.row-4 .col {
+        width: 100%;
+    }
+
+    #main-nav .container {
+        padding: 1rem;
+    }
+
+    #main-nav .container .row {
+        align-items: center;
+    }
+
+    .legal-element .row .col {
+        text-align: center;
+        justify-content: space-between;
+    }
+}
