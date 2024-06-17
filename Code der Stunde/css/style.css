@@ -1,0 +1,292 @@
+:root {
+    --color-brand-dark: #012345;
+    --color-brand-medium: #345678;
+    --color-brand-light: #456789;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-text-default: #444;
+    --bg-gray: #efefef;
+
+    --default-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--default-font);
+    color: var(--color-text-default);
+    margin: 0;
+}
+
+
+/*******************************
+ * allgemeine Elemente         *
+ *******************************/
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+figure q {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/*******************************
+ * allgemeine Klassen          *
+ *******************************/
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.row.columns-2 .col {
+    width: 48%;
+}
+.row.columns-3 .col {
+    width: 31%;
+}
+.row.columns-4 .col {
+    width: 23%;
+}
+
+.flex {
+    display: flex;
+    /*flex-direction: row;*/
+
+    gap: 15px;
+}
+
+.content-block {
+    padding: 3rem 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-gray {
+    background-color: var(--bg-gray);
+}
+
+.bg-dark-blue {
+    background-color: var(--color-brand-medium);
+    color: var(--color-white);
+}
+
+/* Video Element für 16:9 Format*/
+.video-element {
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.video-element iframe {
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/* Formulare */
+.form-label {
+    display: block;
+}
+
+.form-control {
+    border: 1px solid var(--color-text-default);
+    border-radius: 0.35rem;
+    box-shadow: none;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.form-field {
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    border: 2px solid var(--color-text-default);
+    border-radius: 0.35rem;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Map-Einbindung */
+.map-element {
+    position: relative;
+}
+.map-element iframe {
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+/*******************************
+ * Header                      *
+ *******************************/
+
+#page-header {
+    background-color: var(--color-white);
+    box-shadow: 0px 5px 5px 0px rgba(68,68,68,0.75);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Navigation */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#page-header a {
+    color: var(--color-text-default);
+    display: inline-block;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#page-header a:hover {
+    color: var(--color-brand-medium);
+}
+
+#page-header nav a {
+    border-bottom: 1px solid transparent;
+    /*
+    padding: 4px;             --> alle 4 Seiten gleich
+    padding: 4px 8px;         --> oben und unten 4px, rechts und links 8px;
+    padding: 4px 8px 6px;     --> oben 4px, rechts und links 8px, unten 6px;
+    padding: 4px 8px 6px 2px; --> oben 4px, rechts 8px, unten 6px und links 2px;
+    */
+    padding: 0.25rem 0;
+}
+
+#page-header nav a:hover {
+    border-bottom: 1px solid var(--color-brand-medium);
+}
+
+#page-header .container {
+    padding: 1rem 0;
+}
+
+
+/*******************************
+ * Banner-Block                *
+ *******************************/
+.banner-block {
+    background: #000 url(../img/pexels-reynaldo-brigworkz-brigantty-747101.jpg) no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+}
+
+.banner-block .banner-text {
+    bottom: 2rem;
+    position: absolute;
+    width: 100%;
+}
+
+.banner-block .banner-text .headline {
+    background-color: rgba(255,255,255, 0.7);
+    box-sizing: border-box;
+    color: var(--color-black);
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+    max-width: 500px;
+}
+
+/*******************************
+ * Company-Block               *
+ *******************************/
+.company-block h2 {
+
+}
+
+/*******************************
+ * Products-Block              *
+ *******************************/
+ .products-block img {
+    height: 205px;
+    object-fit: cover;
+    width: 100%;
+ }
+
+
+/*******************************
+ * Footer                      *
+ *******************************/
+.legal-notice {
+    font-size: 1.2rem;
+    padding: 1rem 0;
+}
+
+.legal-notice a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+
+/*******************************
+ * Responsive Anpassungen      *
+ *******************************/
+
+@media screen and (max-width: 992px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+    .row.columns-3 .col {
+        width: 49%;
+    }
+    .row.columns-4 .col {
+        width: 49%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    #main-nav {
+        display: none;
+    }
+    #page-header .row {
+        justify-content: center;
+    }
+
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+    .row.columns-2 .col {
+        width: 100%;
+    }
+    .row.columns-3 .col {
+        width: 100%;
+    }
+    .row.columns-4 .col {
+        width: 100%;
+    }
+}
