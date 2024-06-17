@@ -1,0 +1,14 @@
+:root {
+    --color-brand-dark: #012345;
+    --color-brand-medium: #345678;
+    --color-brand-light: #456789;
+    --color-white: #fff;
+    --color-text-default: #444;
+    --bg-gray: #efefef;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-text-default);
+}
+
